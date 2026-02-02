@@ -4,8 +4,8 @@ Este repositório reúne materiais de apoio para uso de Git, GitHub e Bash no co
 
 ## Conteúdos
 
-- [Comandos básicos de Bash](bash-basicos.md)
-- [Git básico – nível 1](git/git-basico.md)
+- [Comandos básicos de Bash](bash-basico.md)
+- [Git básico – nível 1](git-basico.md)
 
 ## Referências
 - https://rogerdudler.github.io/git-guide/
