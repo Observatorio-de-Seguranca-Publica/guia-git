@@ -2,29 +2,32 @@
 
 Este repositório reúne materiais de apoio para utilização do Git, GitHub e Git Bash no âmbito do Observatório de Segurança Pública.
 
+## Primeiros Passos
+
+1. Instalar Git
+2. Configurar Git
+3. Clonar um repositório
+4. Fazer alterações
+5. Commitar
+6. Enviar para o GitHub
+
 ## Conteúdo
 
 ### Git Bash
-- [Comandos básicos de Bash](bash-basico.md)
-- [Navegação entre diretórios]()
-- []()
+- [Comandos básicos de Bash](git_bash/comandos_basicos.md)
+- [Navegação entre diretórios](git_bash/navegacao_arquivos.md)
 
 ### Git
-- Fluxo básico
-- Commits
-- Branches
+- [Fluxo Básico](git/fluxo_basico.md)
+- [Commits](git/commits.md)
+- [Branches]()
 
 ### GitHub
 - Issues
 - Pull Requests
 - Boas práticas
 
-### Exemplos práticos
-- Primeiro commit
-- Criando uma branch
-- Contribuindo para um repositório
-
-## Fluxo padrão adotado pela equipe
+## Fluxo padrão
 
 1. Atualizar repositório
 2. Criar branch
