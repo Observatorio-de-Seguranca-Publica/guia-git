@@ -26,7 +26,7 @@ Se estiver em `catalogo` e quiser retornar para `Armazem`:
 $ cd ..
 ```
 
-Se desejar navegar diretamente para um diretório específico:
+Se desejar navegar diretamente para a pasta raiz:
 ```bash
 $ cd\
 ```
@@ -46,6 +46,3 @@ pwd
 ```
 
 Antes de executar comandos importantes, é recomendável verificar se você está na pasta correta.
-
-```
-```
