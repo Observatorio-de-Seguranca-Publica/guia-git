@@ -29,27 +29,16 @@ drwxr-xr-x 1 x15501492 1049089    0 Jun  9 11:31 .git/
 -rw-r--r-- 1 x15501492 1049089  884 Jun  9 11:52 README.md
 ```
 * cd [nome_diretorio] (“change directory”) -> Altera o diretório em que está trabalhando para a pasta indicado no [nome_pasta].
-
-Exemplo para entrar na pasta 'documents':
+* touch [nome_arquivo.extensao_arquivo] -> Cria um arquivo, importante lembrar da extensão (.py; .sql; .md):
 ```bash
-$ cd documents
-```
-Exemplo para voltar para a pasta anterior:
-```bash
-$ cd ..
-```
-Exemplo para voltar para a pasta raiz:
-```bash
-$ cd\
+$ touch teste.md
 ```
 * rm -rf  [nome_documento] -> Remove arquivo/diretório/pasta permanentemente:
 ```bash
-$ rm -rf README.md
+$ rm -rf teste.md
 ```
-* touch [nome_arquivo.extensao_arquivo] -> Cria um arquivo, importante lembrar da extensão (.py; .sql; .md):
-```bash
-$ touch README.md
-```
+⚠ Atenção: rm -rf remove arquivos e diretórios permanentemente. Utilize com cuidado.
+
 * mkdir [nome_pasta] -> Cria uma pasta:
 ```bash
 $ mkdir aprendendo_git
