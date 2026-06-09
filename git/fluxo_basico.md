@@ -1,22 +1,178 @@
-# Listando os principais comandos utilizados na Git Bash
+# Fluxo Básico de Utilização do Git
 
-Para a utilização do terminal de comando, é necessária a memorização de diversos comandos para a plena utilização de todas as funcionalidades. Entretanto, sobretudo para usuários iniciantes, o autodesenvolvimento na ferramenta é extremamente complicado sem o auxílio de uma "cola", que ajuda a destravar a utilização do terminal durante as primeiras utilizações.
-Obviamente, o conhecimento e fluidez na utilização da Git Bash só ocorre com o tempo e a prática, porém, uma lista com os comandos básicos pode ser um bom "empurrãozinho" para ajudar a tornar esse momento menos espinhoso.
+Após clonar um repositório do GitHub, o trabalho com Git normalmente segue um fluxo simples e repetitivo. Compreender esse ciclo é mais importante do que memorizar dezenas de comandos.
 
-Antes de colocar a lista dos principais comandos, é importante ressaltar que a utilização do "--help" na frente de qualquer comando faz com que o Git Bash dê uma ajuda explicando a sintaxe e os retornos daquele comando.
+O fluxo adotado segue os passos abaixo:
 
-Lista principais comandos:
+1. Atualizar o repositório local
+2. Realizar alterações
+3. Verificar as mudanças realizadas
+4. Adicionar alterações ao Git
+5. Criar um commit
+6. Enviar alterações para o GitHub
 
-## Utilizando o git e github no terminal
-* git init -> Inicializa o git no diretório em que se está trabalhando no momento. Ou seja, a partir da inicialização do git, é possível o versionamento.
-* git clone [link_repositorio] -> Clona o repositório do GitHub na máquina local.
-* git status -> É possível verificar se a navegação está na versão mais recente do diretório/repositório. Além disso, mostra se existe mudanças a serem commitadas.
-* git log -> Mostra a lista de commits daquele repositório.
-* git add -> Adiciona alteração realizadas em documentos ao git.
-* git commit –m “[Mensagem do commit]” -> Realiza o commit com a mensagem que explica qual alteração foi feita.
-* git push -> Utilizado para “empurrar” as alterações realizadas ao github. Obs: é necessário indicar o repositório (via de regra: “origin”) e a branch (ex: “main”). Ou seja, um push comumente fica redigido como: git push origin main.
-* git pull -> Atualiza o repositório na máquina com a versão mais atual. Também é necessário indicar repositório e branch, ex: git pull origin main.
-* git restore -> Utilizado para restaurar versões de arquivos.
-* git checkout [branch] -> Alterna entre as branches do repositório.
-* git checkout -b “nome_branch” -> Cria e nomeia uma nova branch.
-* git switch "nome_branch" -> Também alterna entre as branches do repositório.
+---
+
+## 1. Atualizar o repositório local
+
+Antes de iniciar qualquer atividade, recomenda-se garantir que a cópia local esteja atualizada.
+
+```bash
+git fetch
+git pull origin main
+```
+
+---
+
+## 2. Realizar alterações
+
+Neste momento podem ser criados, removidos ou modificados arquivos utilizando o VSCode.
+
+---
+
+## 3. Verificar as alterações realizadas
+
+O comando abaixo permite verificar quais arquivos foram modificados:
+
+```bash
+git status
+```
+
+Exemplo de retorno:
+
+```text
+On branch main
+
+Changes not staged for commit:
+
+modified: README.md
+modified: tb_material.md
+```
+
+---
+
+## 4. Adicionar alterações ao Git
+
+Após concluir as alterações desejadas, é necessário informar ao Git quais arquivos deverão fazer parte do próximo commit.
+
+Adicionar um arquivo específico:
+
+```bash
+git add README.md
+```
+
+Adicionar todos os arquivos alterados:
+
+```bash
+git add .
+```
+
+O comando `git status` pode ser utilizado novamente para verificar se os arquivos foram adicionados corretamente.
+
+---
+
+## 5. Criar um commit
+
+O commit registra um ponto da história do projeto.
+
+Exemplo:
+
+```bash
+git commit -m "Atualiza documentação da tabela tb_material"
+```
+
+Uma boa mensagem de commit deve descrever de forma objetiva o que foi alterado.
+
+Mais exemplos podem ser encontrados no documento de commits deste guia.
+
+---
+
+## 6. Enviar alterações para o GitHub
+
+Após criar o commit, as alterações ainda estão apenas na máquina local.
+
+Para enviá-las ao GitHub:
+
+```bash
+git push origin main
+```
+
+---
+
+# Fluxo Resumido
+
+O ciclo mais comum de utilização do Git pode ser representado da seguinte forma:
+
+```bash
+git pull origin main
+git status
+git add .
+git commit -m "Descrição da alteração"
+git push origin main
+```
+
+---
+
+# Comandos Auxiliares
+
+## Inicializar Git em uma pasta
+
+Transforma uma pasta comum em um repositório Git.
+
+```bash
+git init
+```
+
+---
+
+## Clonar um repositório
+
+Cria uma cópia local de um repositório existente.
+
+```bash
+git clone [link_repositorio]
+```
+
+Exemplo:
+
+```bash
+git clone https://github.com/Observatorio-de-Seguranca-Publica/guia-git.git
+```
+
+---
+
+## Consultar histórico de commits
+
+Permite visualizar os commits realizados no projeto.
+
+```bash
+git log
+```
+
+---
+
+## Restaurar alterações de um arquivo
+
+Descarta alterações ainda não commitadas.
+
+```bash
+git restore nome_arquivo
+```
+
+Exemplo:
+
+```bash
+git restore README.md
+```
+
+---
+
+# Observação
+
+À medida que os projetos evoluem, o fluxo de trabalho pode incluir recursos adicionais como:
+
+* Branches
+* Issues
+* Pull Requests
+
+Esses temas são abordados em documentos específicos neste repositório.
